@@ -10,5 +10,6 @@ namespace Projeto_Gamer_Full.Models
         public string? Imagem { get; set; }
 
         public ICollection<Jogador> Jogador { get; set; }
+
     }
 }
