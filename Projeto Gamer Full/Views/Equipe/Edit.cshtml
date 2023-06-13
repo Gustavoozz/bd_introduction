@@ -1,9 +1,15 @@
 @model Equipe
 
 @{
-    ViewData["TItle"] = "Edit";
+    ViewData["Title"] = "Edit";
 }
 
+@if (ViewBag.Username == null)
+{
+    <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+}
+
+else {
 <h2>Edição de Equipes</h2>
 
 <form method="post" action='@Url.Action("Atualizar")' enctype="multipart/form-data">
@@ -19,3 +25,4 @@
     <button type="submit">Atualizar</button>
 
 </form>
+}
